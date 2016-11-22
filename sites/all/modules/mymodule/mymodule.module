@@ -1,0 +1,17 @@
+<?php
+
+//http://localhost:8088/my_module/hello_world
+
+function mymodule_menu() {
+    $items['my_module/hello_world'] = array(
+        'page callback' => 'say_hello_world',
+        'access arguments' => array('access content'),
+        'type' => MENU_CALLBACK,
+     );
+
+    return $items;
+}
+
+function say_hello_world() {
+    return 'Hello World Test';
+}
