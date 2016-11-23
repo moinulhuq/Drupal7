@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * Implements hook_block_info.
+ */
+ 
+function custom_block_info() {
+  //$blocks['title'] = t('info');
+
+    $blocks['custom'] = array(
+    'info' => t('custom block'),
+    'cache' => DRUPAL_NO_CACHE
+  );
+
+  //dsm($blocks);
+  return $blocks;  
+}
+
+/**
+ * Implements hook_block_view.
+ */
+function custom_block_view($delta = '') {
+
+  
+  $block['content'] = t('hello world');
+  //dsm($block);
+  return $block;
+}
+
+function custom_block_view_alter(&$data, $block) {
+	//dsm($block);
+	if($block->module == 'custom'){
+		//dsm($data);
+		$data['content']=t('world');
+	}
+}

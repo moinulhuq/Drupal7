@@ -1,0 +1,4 @@
+name = Custom Example
+description = Just a simple example module
+core = 7.x
+package = Alpha Custom Modules
