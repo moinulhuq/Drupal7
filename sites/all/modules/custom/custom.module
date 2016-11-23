@@ -1,5 +1,7 @@
 <?php
 
+//lkink http://www.wdtutorials.com/drupal/module-development/how-to-create-module-1-basics-drupal-tutorial
+
 /**
  * Implements hook_block_info.
  */
